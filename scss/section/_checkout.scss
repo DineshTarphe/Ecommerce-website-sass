@@ -1,0 +1,168 @@
+@use '../custom' as *;
+@use '../section/deliver-detail' as *;
+@use '../components/mixins' as *;
+
+.checkout-section{
+    padding: toRem(70) toRem(0);
+    
+    .checkout-form{
+        padding: toRem(0) toRem(100);
+
+        @include breakpoint(lg){
+            padding: toRem(0) toRem(50);
+        }
+        @include breakpoint(md){
+            padding: toRem(0) toRem(30);
+        }
+        @include breakpoint(sm){
+            padding: toRem(0) toRem(0);
+        }
+        @include breakpoint(xs){
+            padding: toRem(0) toRem(0);
+        }
+        h3{
+            font-size: toRem(36);
+            font-weight: 600;
+            color: #000;
+            font-family: 'Poppins';
+        }
+        form{
+            .checkout-wrapper{
+                .row{
+                    margin: toRem(15) toRem(0);
+                    label{
+                        font-size: toRem(16);
+                        font-weight: 500;
+                        color: #000;
+                        font-family: 'Poppins';
+                        padding: toRem(10) toRem(0);
+                        width: 100%;
+                    }
+                    input{
+                        border: 1px solid #9F9F9F;
+                        border-radius: toRem(10);
+                        padding: toRem(10);
+                    }
+                    select{
+                        border: 1px solid #9F9F9F;
+                        border-radius: toRem(10);
+                        padding: toRem(10);
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .product-payment-wrapper{
+        table{
+            width: 100%;
+            tbody{
+                tr{
+                    
+                    th{
+                        font-size: toRem(24);
+                        font-weight: 500;
+                        color: #000;
+                        font-family: 'Poppins';
+                        padding: toRem(5) toRem(0);
+
+                        &:last-child{
+                            text-align: right;
+                        }
+                    }
+                    td{
+                        font-size: toRem(16);
+                        font-weight: 300;
+                        color: #000;
+                        font-family: 'Poppins';
+                        padding: toRem(5) toRem(0);
+
+                        &:last-child{
+                            text-align: right;
+                        }
+
+                        &.final-price{
+                            color:#B88E2F;
+                            font-size: toRem(24);
+                            font-weight: 700;
+                        }
+
+                        span{
+                            font-size: toRem(16);
+                            font-weight: 400;
+                            color: #9F9F9F;
+                            font-family: 'Poppins';
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .direct-trasfer-div{
+        // display: ;
+        p{
+            font-size: toRem(16);
+            font-weight: 400;
+            color: #000;
+            font-family: 'Poppins';
+            padding: 0;
+            margin: 0;
+
+
+            span{
+                width: toRem(14);
+                height: toRem(14);
+                line-height: toRem(14);
+                border-radius: toRem(50);
+                background-color: #000;
+                display: inline-block;
+                margin-right: toRem(20);
+            }
+        }
+        h6{
+            font-size: toRem(16);
+            color:#9F9F9F;
+            font-family: 'Poppins';
+            font-weight: 400;
+            line-height: toRem(30);
+            margin-top: toRem(15);
+        }
+        .payment-options{
+            .first-radio-btn{
+                input{
+
+                }
+                label{
+                    font-size: toRem(16);
+                    color:#9F9F9F;
+                    font-weight: 500;
+                    font-family: 'Poppins';
+                    padding-left: toRem(10);
+                }
+            }
+            p{
+                padding-top: toRem(20);
+                font-size: toRem(16);
+                color:#000;
+                font-weight: 300;
+                font-family: 'Poppins';
+                b{
+                    font-weight: 700;
+                }
+            }
+        }
+        .place-btn{
+            margin-top: toRem(50);
+            text-align: center;
+            a{
+                border-radius: toRem(15);
+                border:1px solid #000;
+                color:#000;
+                font-size: toRem(20);
+                font-weight: 400;
+                padding: toRem(15) toRem(100);
+                text-decoration: none;
+            }
+        }
+    }
+}

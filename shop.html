@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniro Website Template in Sass</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html"><img src="./images/furniro-logo.png" class="img-fluid"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="shop.html">Shop</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="header-icons">
+                <a href="javascript:void(0);"><i class="fa-regular fa-user"></i></a>
+                <a href="javascript:void(0);"><i class="fa fa-search"></i></a>
+                <a href="javascript:void(0);"><i class="fa-regular fa-heart"></i></a>
+                <a id="shoppingcart" href="javascript:void(0);"><i class="fa-solid fa-cart-shopping"></i></a>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+
+        <!-- Breadcrump Section Start -->
+        <section class="breadcrumb-section position-relative">
+            <div class="breadcrumb-bg-img">
+                <img src="./images/shop/shop-banner.png" class="img-fluid w-100">
+            </div>
+            <div class="breadcrumb-text">
+                <h3>Shop</h3>
+                <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Library</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+        <!-- Breadcrump Section End -->
+
+        <!-- Filter Section Start -->
+        <section class="filter-section">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-lg-6 col-md-12 col-xs-12">
+                        <div class="filter-option">
+                            <ul>
+                                <li><a href="javascript:void(0);"><img src="./images/icons/filter.png">Filter</a></li>
+                                <li><a href="javascript:void(0);"><img src="./images/icons/grid.png"></a></li>
+                                <li><a href="javascript:void(0);"><img src="./images/icons/inline.png"></a></li>
+                                <li class="vertical-divider"></li>
+                                <li class="result-text">Showing 1–16 of 32 results</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-xs-12">
+                        <div class="sort-wrapper">
+                            <div class="sort-by-option">
+                                <div class="show-div">
+                                    <h4>Show</h4>
+                                    <input type="text" min="0" max="10" value="5">
+                                </div>
+                            </div>
+                            <div class="sort-by-option">
+                                <div class="show-div">
+                                    <h4>Short by</h4>
+                                    <select>
+                                        <option>Default</option>
+                                        <option>Low-High</option>
+                                        <option>High-Low</option>
+                                        <option>A-Z</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Filter Section End -->
+
+        <!-- Our Products Section Starts -->
+        <section id="our-products" class="our-products-section shop-page-section">
+            <div class="container">
+                <!-- <div class="row">
+                    <div class="col-12">
+                        <h3 class="section-title text-center">Our Products</h3>
+                    </div>
+                </div> -->
+                <div class="product-wrapper">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="./images/image-1.png" class="img-fluid">
+                            <figcaption>-30%</figcaption>
+                        </div>
+                        <div class="product-content">
+                            <h5>Syltherine</h5>
+                            <p>Stylish cafe chair</p>
+                            <div class="price-div">
+                                <b>Rp 2.500.000</b>
+                                <del>Rp 3.500.000</del>
+                            </div>
+                        </div>
+                        <div class="product-overlay">
+                            <div class="product-overlay-wrapper">
+                                <!-- <button class="btn add-cart-btn">Add To Cart</button> -->
+                                <a href="cart.html" class="btn add-cart-btn">Add To Cart</a>
+                                <div class="share-like-wrapper">
+                                    <a href="javascript:void(0)"><i class="fa fa-share-alt"></i>Share</a>
+                                    <a href="javascript:void(0)"><i class="fa-solid fa-code-compare"></i>Compare</a>
+                                    <a href="javascript:void(0)"><i class="fa-regular fa-heart"></i>Like</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="./images/image-3.png" class="img-fluid">
+                            <figcaption>-50%</figcaption>
+                        </div>
+                        <div class="product-content">
+                            <h5>Lolito</h5>
+                            <p>Luxury big sofa</p>
+                            <div class="price-div">
+                                <b>Rp 7.000.000</b>
+                                <del>Rp 14.000.000</del>
+                            </div>
+                        </div>
+                        <div class="product-overlay">
+                            <div class="product-overlay-wrapper">
+                                <!-- <button class="btn add-cart-btn">Add To Cart</button> -->
+                                <a href="cart.html" class="btn add-cart-btn">Add To Cart</a>
+                                <div class="share-like-wrapper">
+                                    <a href="javascript:void(0)"><i class="fa fa-share-alt"></i>Share</a>
+                                    <a href="javascript:void(0)"><i class="fa-solid fa-code-compare"></i>Compare</a>
+                                    <a href="javascript:void(0)"><i class="fa-regular fa-heart"></i>Like</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="./images/image-4.png" class="img-fluid">
+                            <figcaption class="new-tag">New</figcaption>
+                        </div>
+                        <div class="product-content">
+                            <h5>Respira</h5>
+                            <p>Outdoor bar table and stool</p>
+                            <div class="price-div">
+                                <b>Rp 500.000</b>
+                                <!-- <del>Rp 3.500.000</del> -->
+                            </div>
+                        </div>
+                        <div class="product-overlay">
+                            <div class="product-overlay-wrapper">
+                                <!-- <button class="btn add-cart-btn">Add To Cart</button> -->
+                                <a href="cart.html" class="btn add-cart-btn">Add To Cart</a>
+                                <div class="share-like-wrapper">
+                                    <a href="javascript:void(0)"><i class="fa fa-share-alt"></i>Share</a>
+                                    <a href="javascript:void(0)"><i class="fa-solid fa-code-compare"></i>Compare</a>
+                                    <a href="javascript:void(0)"><i class="fa-regular fa-heart"></i>Like</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="./images/image-2.png" class="img-fluid">
+                            <!-- <figcaption>-30%</figcaption> -->
+                        </div>
+                        <div class="product-content">
+                            <h5>Grifo</h5>
+                            <p>Night lamp</p>
+                            <div class="price-div">
+                                <b>Rp 1.500.000</b>
+                                <!-- <del>Rp 3.500.000</del> -->
+                            </div>
+                        </div>
+                        <div class="product-overlay">
+                            <div class="product-overlay-wrapper">
+                                <!-- <button class="btn add-cart-btn">Add To Cart</button> -->
+                                <a href="cart.html" class="btn add-cart-btn">Add To Cart</a>
+                                <div class="share-like-wrapper">
+                                    <a href="javascript:void(0)"><i class="fa fa-share-alt"></i>Share</a>
+                                    <a href="javascript:void(0)"><i class="fa-solid fa-code-compare"></i>Compare</a>
+                                    <a href="javascript:void(0)"><i class="fa-regular fa-heart"></i>Like</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="./images/image-5.png" class="img-fluid">
+                            <figcaption class="new-tag">New</figcaption>
+                        </div>
+                        <div class="product-content">
+                            <h5>Muggo</h5>
+                            <p>Small mug</p>
+                            <div class="price-div">
+                                <b>Rp 150.000</b>
+                                <!-- <del>Rp 3.500.000</del> -->
+                            </div>
+                        </div>
+                        <div class="product-overlay">
+                            <div class="product-overlay-wrapper">
+                                <!-- <button class="btn add-cart-btn">Add To Cart</button> -->
+                                <a href="cart.html" class="btn add-cart-btn">Add To Cart</a>
+                                <div class="share-like-wrapper">
+                                    <a href="javascript:void(0)"><i class="fa fa-share-alt"></i>Share</a>
+                                    <a href="javascript:void(0)"><i class="fa-solid fa-code-compare"></i>Compare</a>
+                                    <a href="javascript:void(0)"><i class="fa-regular fa-heart"></i>Like</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="./images/image-7.png" class="img-fluid">
+                            <figcaption>-50%</figcaption>
+                        </div>
+                        <div class="product-content">
+                            <h5>Pingky</h5>
+                            <p>Cute bed set</p>
+                            <div class="price-div">
+                                <b>Rp 7.000.000</b>
+                                <del>Rp 14.000.000</del>
+                            </div>
+                        </div>
+                        <div class="product-overlay">
+                            <div class="product-overlay-wrapper">
+                                <!-- <button class="btn add-cart-btn">Add To Cart</button> -->
+                                <a href="cart.html" class="btn add-cart-btn">Add To Cart</a>
+                                <div class="share-like-wrapper">
+                                    <a href="javascript:void(0)"><i class="fa fa-share-alt"></i>Share</a>
+                                    <a href="javascript:void(0)"><i class="fa-solid fa-code-compare"></i>Compare</a>
+                                    <a href="javascript:void(0)"><i class="fa-regular fa-heart"></i>Like</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="./images/image-8.png" class="img-fluid">
+                            <figcaption class="new-tag">New</figcaption>
+                        </div>
+                        <div class="product-content">
+                            <h5>Potty</h5>
+                            <p>Minimalist flower pot</p>
+                            <div class="price-div">
+                                <b>Rp 500.000</b>
+                                <!-- <del>Rp 3.500.000</del> -->
+                            </div>
+                        </div>
+                        <div class="product-overlay">
+                            <div class="product-overlay-wrapper">
+                                <!-- <button class="btn add-cart-btn">Add To Cart</button> -->
+                                <a href="cart.html" class="btn add-cart-btn">Add To Cart</a>
+                                <div class="share-like-wrapper">
+                                    <a href="javascript:void(0)"><i class="fa fa-share-alt"></i>Share</a>
+                                    <a href="javascript:void(0)"><i class="fa-solid fa-code-compare"></i>Compare</a>
+                                    <a href="javascript:void(0)"><i class="fa-regular fa-heart"></i>Like</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="./images/image-1.png" class="img-fluid">
+                            <figcaption>-30%</figcaption>
+                        </div>
+                        <div class="product-content">
+                            <h5>Leviosa</h5>
+                            <p>Stylish cafe chair</p>
+                            <div class="price-div">
+                                <b>Rp 2.500.000</b>
+                                <!-- <del>Rp 3.500.000</del> -->
+                            </div>
+                        </div>
+                        <div class="product-overlay">
+                            <div class="product-overlay-wrapper">
+                                <!-- <button class="btn add-cart-btn">Add To Cart</button> -->
+                                <a href="cart.html" class="btn add-cart-btn">Add To Cart</a>
+                                <div class="share-like-wrapper">
+                                    <a href="javascript:void(0)"><i class="fa fa-share-alt"></i>Share</a>
+                                    <a href="javascript:void(0)"><i class="fa-solid fa-code-compare"></i>Compare</a>
+                                    <a href="javascript:void(0)"><i class="fa-regular fa-heart"></i>Like</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="./images/image-1.png" class="img-fluid">
+                            <figcaption>-30%</figcaption>
+                        </div>
+                        <div class="product-content">
+                            <h5>Syltherine</h5>
+                            <p>Stylish cafe chair</p>
+                            <div class="price-div">
+                                <b>Rp 2.500.000</b>
+                                <del>Rp 3.500.000</del>
+                            </div>
+                        </div>
+                        <div class="product-overlay">
+                            <div class="product-overlay-wrapper">
+                                <!-- <button class="btn add-cart-btn">Add To Cart</button> -->
+                                <a href="cart.html" class="btn add-cart-btn">Add To Cart</a>
+                                <div class="share-like-wrapper">
+                                    <a href="javascript:void(0)"><i class="fa fa-share-alt"></i>Share</a>
+                                    <a href="javascript:void(0)"><i class="fa-solid fa-code-compare"></i>Compare</a>
+                                    <a href="javascript:void(0)"><i class="fa-regular fa-heart"></i>Like</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="./images/image-3.png" class="img-fluid">
+                            <figcaption>-50%</figcaption>
+                        </div>
+                        <div class="product-content">
+                            <h5>Lolito</h5>
+                            <p>Luxury big sofa</p>
+                            <div class="price-div">
+                                <b>Rp 7.000.000</b>
+                                <del>Rp 14.000.000</del>
+                            </div>
+                        </div>
+                        <div class="product-overlay">
+                            <div class="product-overlay-wrapper">
+                                <!-- <button class="btn add-cart-btn">Add To Cart</button> -->
+                                <a href="cart.html" class="btn add-cart-btn">Add To Cart</a>
+                                <div class="share-like-wrapper">
+                                    <a href="javascript:void(0)"><i class="fa fa-share-alt"></i>Share</a>
+                                    <a href="javascript:void(0)"><i class="fa-solid fa-code-compare"></i>Compare</a>
+                                    <a href="javascript:void(0)"><i class="fa-regular fa-heart"></i>Like</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="./images/image-4.png" class="img-fluid">
+                            <figcaption class="new-tag">New</figcaption>
+                        </div>
+                        <div class="product-content">
+                            <h5>Respira</h5>
+                            <p>Outdoor bar table and stool</p>
+                            <div class="price-div">
+                                <b>Rp 500.000</b>
+                                <!-- <del>Rp 3.500.000</del> -->
+                            </div>
+                        </div>
+                        <div class="product-overlay">
+                            <div class="product-overlay-wrapper">
+                                <!-- <button class="btn add-cart-btn">Add To Cart</button> -->
+                                <a href="cart.html" class="btn add-cart-btn">Add To Cart</a>
+                                <div class="share-like-wrapper">
+                                    <a href="javascript:void(0)"><i class="fa fa-share-alt"></i>Share</a>
+                                    <a href="javascript:void(0)"><i class="fa-solid fa-code-compare"></i>Compare</a>
+                                    <a href="javascript:void(0)"><i class="fa-regular fa-heart"></i>Like</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="./images/image-2.png" class="img-fluid">
+                            <!-- <figcaption>-30%</figcaption> -->
+                        </div>
+                        <div class="product-content">
+                            <h5>Grifo</h5>
+                            <p>Night lamp</p>
+                            <div class="price-div">
+                                <b>Rp 1.500.000</b>
+                                <!-- <del>Rp 3.500.000</del> -->
+                            </div>
+                        </div>
+                        <div class="product-overlay">
+                            <div class="product-overlay-wrapper">
+                                <!-- <button class="btn add-cart-btn">Add To Cart</button> -->
+                                <a href="cart.html" class="btn add-cart-btn">Add To Cart</a>
+                                <div class="share-like-wrapper">
+                                    <a href="javascript:void(0)"><i class="fa fa-share-alt"></i>Share</a>
+                                    <a href="javascript:void(0)"><i class="fa-solid fa-code-compare"></i>Compare</a>
+                                    <a href="javascript:void(0)"><i class="fa-regular fa-heart"></i>Like</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="./images/image-5.png" class="img-fluid">
+                            <figcaption class="new-tag">New</figcaption>
+                        </div>
+                        <div class="product-content">
+                            <h5>Muggo</h5>
+                            <p>Small mug</p>
+                            <div class="price-div">
+                                <b>Rp 150.000</b>
+                                <!-- <del>Rp 3.500.000</del> -->
+                            </div>
+                        </div>
+                        <div class="product-overlay">
+                            <div class="product-overlay-wrapper">
+                                <!-- <button class="btn add-cart-btn">Add To Cart</button> -->
+                                <a href="cart.html" class="btn add-cart-btn">Add To Cart</a>
+                                <div class="share-like-wrapper">
+                                    <a href="javascript:void(0)"><i class="fa fa-share-alt"></i>Share</a>
+                                    <a href="javascript:void(0)"><i class="fa-solid fa-code-compare"></i>Compare</a>
+                                    <a href="javascript:void(0)"><i class="fa-regular fa-heart"></i>Like</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="./images/image-7.png" class="img-fluid">
+                            <figcaption>-50%</figcaption>
+                        </div>
+                        <div class="product-content">
+                            <h5>Pingky</h5>
+                            <p>Cute bed set</p>
+                            <div class="price-div">
+                                <b>Rp 7.000.000</b>
+                                <del>Rp 14.000.000</del>
+                            </div>
+                        </div>
+                        <div class="product-overlay">
+                            <div class="product-overlay-wrapper">
+                                <!-- <button class="btn add-cart-btn">Add To Cart</button> -->
+                                <div class="share-like-wrapper">
+                                    <a href="javascript:void(0)"><i class="fa fa-share-alt"></i>Share</a>
+                                    <a href="javascript:void(0)"><i class="fa-solid fa-code-compare"></i>Compare</a>
+                                    <a href="javascript:void(0)"><i class="fa-regular fa-heart"></i>Like</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="./images/image-8.png" class="img-fluid">
+                            <figcaption class="new-tag">New</figcaption>
+                        </div>
+                        <div class="product-content">
+                            <h5>Potty</h5>
+                            <p>Minimalist flower pot</p>
+                            <div class="price-div">
+                                <b>Rp 500.000</b>
+                                <!-- <del>Rp 3.500.000</del> -->
+                            </div>
+                        </div>
+                        <div class="product-overlay">
+                            <div class="product-overlay-wrapper">
+                                <!-- <button class="btn add-cart-btn">Add To Cart</button> -->
+                                <a href="cart.html" class="btn add-cart-btn">Add To Cart</a>
+                                <div class="share-like-wrapper">
+                                    <a href="javascript:void(0)"><i class="fa fa-share-alt"></i>Share</a>
+                                    <a href="javascript:void(0)"><i class="fa-solid fa-code-compare"></i>Compare</a>
+                                    <a href="javascript:void(0)"><i class="fa-regular fa-heart"></i>Like</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="./images/image-1.png" class="img-fluid">
+                            <figcaption>-30%</figcaption>
+                        </div>
+                        <div class="product-content">
+                            <h5>Leviosa</h5>
+                            <p>Stylish cafe chair</p>
+                            <div class="price-div">
+                                <b>Rp 2.500.000</b>
+                                <!-- <del>Rp 3.500.000</del> -->
+                            </div>
+                        </div>
+                        <div class="product-overlay">
+                            <div class="product-overlay-wrapper">
+                                <!-- <button class="btn add-cart-btn">Add To Cart</button> -->
+                                <a href="cart.html" class="btn add-cart-btn">Add To Cart</a>
+                                <div class="share-like-wrapper">
+                                    <a href="javascript:void(0)"><i class="fa fa-share-alt"></i>Share</a>
+                                    <a href="javascript:void(0)"><i class="fa-solid fa-code-compare"></i>Compare</a>
+                                    <a href="javascript:void(0)"><i class="fa-regular fa-heart"></i>Like</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination-div">
+                    <a class="active" href="javascript:void(0);">1</a>
+                    <a href="javascript:void(0);">2</a>
+                    <a href="javascript:void(0);">3</a>
+                    <a class="next-btn" href="javascript:void(0);">Next</a>
+                </div>
+            </div>
+        </section>
+        <!-- Our Products Section End -->
+
+        <!-- High Quality Section Start -->
+        <section class="delivery-detail-section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="delivery-wrapper">
+                            <div class="quality-icon">
+                                <img src="./images/icons/quality.png">
+                            </div>
+                            <div class="delivery-text">
+                                <h4>High Quality</h4>
+                                <p>crafted from top materials</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="delivery-wrapper">
+                            <div class="quality-icon">
+                                <img src="./images/icons/guarantee.png">
+                            </div>
+                            <div class="delivery-text">
+                                <h4>Warranty Protection</h4>
+                                <p>Over 2 years</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="delivery-wrapper">
+                            <div class="quality-icon">
+                                <img src="./images/icons/shipping.png">
+                            </div>
+                            <div class="delivery-text">
+                                <h4>Free Shipping</h4>
+                                <p>Order over 150 $</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="delivery-wrapper">
+                            <div class="quality-icon">
+                                <img src="./images/icons/customer-support.png">
+                            </div>
+                            <div class="delivery-text">
+                                <h4>24 / 7 Support</h4>
+                                <p>Dedicated support</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- High Quality Section End -->
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-xs-12">
+                    <div class="footer-logo">
+                        <div class="logo-img">
+                            <img src="./images/funiro-logo-footer.png" class="img-fluid">
+                        </div>
+                        <div class="footer-address">
+                            <p>400 University Drive Suite 200 Coral Gables, FL 33134 USA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-xs-12">
+                    <div class="footer-links">
+                        <h4>Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="javascript:void(0);">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-xs-12">
+                    <div class="footer-links">
+                        <h4>Help</h4>
+                        <ul>
+                            <li><a href="javascript:void(0);">Payment Options</a></li>
+                            <li><a href="javascript:void(0);">Returns</a></li>
+                            <li><a href="javascript:void(0);">Privacy Policies</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-xs-12">
+                    <div class="footer-links">
+                        <h4>Newsletter</h4>
+                        <form>
+                            <div class="subscribe-wrapper">
+                                <input type="email" id="email" placeholder="Enter Your Email Address">
+                                <button class="btn btn-subs" type="submit">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <p class="copyright">2023 furino. All rights reverved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!--Cart popup Start-->
+
+    <section class="popup-main" id="popup-cart">
+        <div class="popup-inner">
+            <div class="cart-table">
+                <div class="cart-title">
+                    <h4>Shopping Cart</h4>
+                    <button id="cartclose"><img src="./images/icons/cartclose.png"></button>
+                </div>
+                <hr class="mt-4 mb-4">
+                <div class="popup-wrapper">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="javascript:void(0);"><img src="./images/image-1.png"></a>
+                                </td>
+                                <td>
+                                    <a href="javascript:void(0);">
+                                        <p>Asgaard sofa</p>
+                                        <p>1 X <span>Rs. 250,000.00</span></p>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a class="close-popup-btn" href="javascript:void(0);"><img src="./images/icons/close-popup.png"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="javascript:void(0);"><img src="./images/image-2.png"></a>
+                                </td>
+                                <td>
+                                    <a href="javascript:void(0);">
+                                        <p>Casaliving Wood</p>
+                                        <p>1 X <span>Rs. 270,000.00</span></p>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a class="close-popup-btn" href="javascript:void(0);"><img src="./images/icons/close-popup.png"></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="sub-total-wrapper">
+                    <h5>Subtotal</h5>
+                    <p>Rs. 520,000.00</p>
+                </div>
+            </div>
+            <hr>
+            <div class="cart-popup-btn">
+                <a href="cart.html" class="btn-popup">Cart</a>
+                <a href="checkout.html" class="btn-popup">Checkout</a>
+                <a href="cart.html" class="btn-popup">Comparison</a>
+            </div>
+        </div>
+    </section>
+
+    <!--Cart popup End-->
+
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script src="./assets/js/custom.js"></script>
+</html>

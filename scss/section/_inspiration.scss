@@ -1,0 +1,157 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+
+.inspiration-section{
+    background-color: #FCF8F3;
+    padding: toRem(70) toRem(0);
+
+    .beautiful-inspiration-text{
+        width: 62%;
+        margin-left: auto;
+
+        @include breakpoint(sm){
+            width: 100%;
+            padding: 25px;
+        }
+        @include breakpoint(xs){
+            width: 100%;
+            padding: 20px;
+        }
+        h3{
+            font-size: toRem(40);
+            color: #3a3a3a;
+            font-weight: 700;
+
+            @include breakpoint(sm){
+                font-size: toRem(25);
+            }
+            @include breakpoint(xs){
+                font-size: toRem(25);
+            }
+            
+        }
+        p{
+            font-size: toRem(16);
+            font-weight: 500;
+            color: #616161;
+            padding-top: toRem(15);
+            padding-bottom: toRem(30);
+        }
+        a{
+            @include button-bg($background-color:true)
+        }
+    }
+    .swiper.inspire-slider{
+        .swiper-wrapper{
+            .swiper-slide{
+                .inspire-card{
+                    position: relative;
+                    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+                    .inspire-img{
+                        img{
+                            width: 100%;
+                            height: 500px;
+                            object-fit: cover;
+                            transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+                            @include breakpoint(sm){
+                                height: 400px;
+                            }
+                            @include breakpoint(xs){
+                                height: 400px;
+                            }
+                        }
+                    }
+                    .inspire-content-wrapper {
+                        position: absolute;
+                        bottom: 5%;
+                        left: 5%;
+                        display: flex;
+                        align-items: flex-end;
+                        display: none;
+
+                        .inspire-content{
+                            position: relative;
+                            padding: toRem(15);
+                            backdrop-filter: blur(7px) saturate(32%);
+                            -webkit-backdrop-filter: blur(7px) saturate(32%);
+                            background-color: rgb(255 255 255 / 50%);
+                        }
+                        .inspire-btn{
+                            
+                            a{
+                                width: toRem(48);
+                                height: toRem(48);
+                                text-align: center;
+                                line-height: toRem(48);
+                                background-color: #b88e2f;
+                                display: block;
+                                i{
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+                &.swiper-slide-active{
+                    .inspire-card{
+                        .inspire-img{
+                            img{
+                                width: 100%;
+                                height: 582px;
+                                object-fit: cover;
+                                transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+                                @include breakpoint(sm){
+                                    height: 500px;
+                                }
+                                @include breakpoint(xs){
+                                    height: 500px;
+                                }
+                            }
+                        }
+                        
+                        .inspire-content-wrapper{
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
+        .swiper-pagination{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .swiper-pagination-bullet{
+                background-color: #D8D8D8;
+                width: toRem(11);
+                height: toRem(11);
+                opacity: 1;
+
+                &.swiper-pagination-bullet-active{
+                    border: 1px solid #B88E2F;
+                    width: toRem(25);
+                    height: toRem(25);
+                    background-color: transparent;
+                    position: relative;
+                    text-align: center;
+
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        width: toRem(11);
+                        height: toRem(11);
+                        border-radius: 50px;
+                        background-color: #B88E2F;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%,-50%);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,127 @@
+@use '../custom' as *;
+@use '../section/deliver-detail' as *;
+@use '../components/mixins' as *;
+
+.contact-us-section{
+    padding: toRem(70) toRem(0);
+
+    .contact-title{
+        text-align: center;
+        padding-bottom: toRem(30);
+        h3{
+            font-size: toRem(36);
+            font-weight: 600;
+            color: #000;
+            font-family: 'Poppins';
+
+            @include breakpoint(sm){
+                font-size: toRem(26);
+            }
+            @include breakpoint(xs){
+                font-size: toRem(26);
+            }
+        }
+        p{
+            color: #9F9F9F;
+            font-size: toRem(16);
+            font-weight: 400;
+            font-family: 'Poppins';
+            max-width: 50%;
+            width: 100%;
+            margin: 0 auto;
+
+            @include breakpoint(lg){
+                width: 60%;
+            }
+            @include breakpoint(md){
+                width: 60%;
+            }
+            @include breakpoint(sm){
+                max-width: 100%;
+            }
+            @include breakpoint(xs){
+                max-width: 100%;
+            }
+        }
+    }
+    .location{
+        display: flex;
+        align-items: flex-start;
+        gap: toRem(30);
+        padding-bottom: toRem(40);
+
+        .icon{
+            i{
+                font-size: toRem(25);
+            }
+        }
+        .location-content{
+            max-width: 50%;
+            width: 100%;
+
+            @include breakpoint(lg){
+                max-width: 60%;
+            }
+            @include breakpoint(md){
+                max-width: 60%;
+            }
+            @include breakpoint(sm){
+                max-width: 100%;
+            }
+            @include breakpoint(xs){
+                max-width: 100%;
+            }
+            h5{
+                font-size: toRem(24);
+                font-weight: 500;
+                color: #000;
+                font-family: 'Poppins';
+            }
+            p{
+                font-size: toRem(16);
+                font-weight: 400;
+                color: #000;
+                font-family: 'Poppins';
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+    form{
+        label{
+            font-size: toRem(16);
+            font-weight: 500;
+            color: #000;
+            font-family: 'Poppins';
+            padding-bottom: toRem(10);
+            padding-top: toRem(25);
+
+        }
+        input{
+            border-radius: toRem(10);
+            padding: toRem(12) toRem(15);
+            border: none;
+            border:1px solid #9F9F9F;
+        }
+        textarea{
+            display: block;
+            border-radius: toRem(10);
+            padding: toRem(12) toRem(15);
+            width: 100%;
+            resize: none;
+            height: 100%;
+            border: none;
+            border:1px solid #9F9F9F;
+        }
+        .btn-submit{
+            background-color: #b88e2f;
+            border: none;
+            outline: none;
+            font-size: toRem(16);
+            font-weight: 400;
+            color: #fff;
+            font-family: 'Poppins';
+            padding: toRem(12) toRem(60);
+        }
+    }
+}

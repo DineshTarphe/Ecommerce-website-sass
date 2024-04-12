@@ -1,0 +1,72 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+header{
+    background-color: #fff !important;
+    nav{
+        padding: toRem(20) toRem(80) !important;
+        background-color: #fff !important;
+        z-index: 2 !important;
+
+        @include breakpoint(sm){
+            padding: toRem(15) toRem(15) !important;
+        }
+        @include breakpoint(xs){
+            padding: toRem(15) toRem(15) !important;
+        }
+
+        .navbar-toggler{
+            background-color: transparent;
+            border: none;
+
+            &:focus{
+                border:none;
+                outline: none;
+                box-shadow: none;
+            }
+        }
+        #navbarNav{
+            ul{
+                gap: toRem(50);
+                justify-content: center;
+                width: 100%;
+
+                @include breakpoint(sm){
+                    gap: toRem(5);
+                }
+                @include breakpoint(xs){
+                    gap: toRem(5);
+                }
+                li{
+                    a{
+                        text-decoration: none;
+                        font-weight: 500;
+                        color: #000;
+                        font-size: toRem(16);
+                    }
+                }
+            }
+        }
+        .header-icons{
+            display: flex;
+            gap: toRem(50);
+
+            @include breakpoint(sm){
+                gap: toRem(20);
+                display: none;
+            }
+            @include breakpoint(xs){
+                gap: toRem(20);
+                display: none;
+            }
+
+            a{
+                color:#000;
+
+                i{
+                    font-size: toRem(20);
+                }
+            }
+        }
+    }
+}

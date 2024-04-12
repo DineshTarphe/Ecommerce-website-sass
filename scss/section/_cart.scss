@@ -1,0 +1,220 @@
+@use '../custom' as *;
+@use '../section/deliver-detail' as *;
+@use '../components/mixins' as *;
+
+.cart-box-section{
+    margin: toRem(70) toRem(0);
+    .cart-product-wrapper{
+        .cart-table{
+            table{
+                width: 100%;
+                .head{
+                    background-color: #F9F1E7;
+                    
+                    th{
+                        padding: toRem(15) toRem(10);
+                        font-size: toRem(16);
+                        font-weight: 500;
+                        color: #000;
+                        font-family: 'Poppins';
+
+                        @include breakpoint(lg){
+                            font-size: toRem(14);
+                        }
+                        @include breakpoint(md){
+                            font-size: toRem(14);
+                        }
+                        @include breakpoint(sm){
+                            font-size: toRem(14);
+                        }
+                        @include breakpoint(xs){
+                            font-size: toRem(14);
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        margin: toRem(30) toRem(0);
+                        td{
+                            padding: toRem(15) toRem(10);
+                            img{
+                                width: toRem(105);
+                                height: toRem(105);
+                                border-radius: toRem(10);
+                                object-fit: contain;
+                                object-position: top;
+                            }
+                            h5{
+                                font-size: toRem(16);
+                                font-weight: 400;
+                                color: #9F9F9F;
+                                font-family: 'Poppins';
+                                padding: 0;
+                                margin: 0;
+                                @include breakpoint(lg){
+                                    font-size: toRem(12);
+                                }
+                                @include breakpoint(md){
+                                    font-size: toRem(12);
+                                }
+                                @include breakpoint(sm){
+                                    font-size: toRem(12);
+                                }
+                                @include breakpoint(xs){
+                                    font-size: toRem(12);
+                                }
+                            }
+                            p{
+                                font-size: toRem(16);
+                                font-weight: 400;
+                                color: #9F9F9F;
+                                font-family: 'Poppins';
+                                padding: 0;
+                                margin: 0;
+                                @include breakpoint(lg){
+                                    font-size: toRem(12);
+                                }
+                                @include breakpoint(md){
+                                    font-size: toRem(12);
+                                }
+                                @include breakpoint(sm){
+                                    font-size: toRem(12);
+                                }
+                                @include breakpoint(xs){
+                                    font-size: toRem(12);
+                                }
+                            }
+                            b{
+                                font-weight: 400 !important;
+                                @include breakpoint(lg){
+                                    font-size: toRem(12);
+                                }
+                                @include breakpoint(md){
+                                    font-size: toRem(12);
+                                }
+                                @include breakpoint(sm){
+                                    font-size: toRem(12);
+                                }
+                                @include breakpoint(xs){
+                                    font-size: toRem(12);
+                                }
+                            }
+                            input{
+                                text-align: center;
+                                &[type="number"]{
+                                    width: toRem(32);
+                                    height: toRem(32);
+                                    text-align: center;
+                                }
+                            }
+                            .del-icon{
+                                width: toRem(16);
+                                height: toRem(16);
+                                object-fit: contain;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .cart-total{
+        background-color: #f9f1e7;
+        padding: toRem(30);
+        h3{
+            text-align: center;
+            font-size: toRem(32);
+            color: #000;
+            font-family: 'Poppins';
+            margin-bottom: toRem(50);
+            font-weight: 600;
+
+            @include breakpoint(lg){
+                font-size: toRem(24);
+            }
+            @include breakpoint(md){
+                font-size: toRem(24);
+            }
+            @include breakpoint(sm){
+                font-size: toRem(20);
+            }
+            @include breakpoint(xs){
+                font-size: toRem(20);
+            }
+        }
+        .cart-total-wrapper{
+            margin-bottom: toRem(50);
+            .subtotal-div{
+                display: flex;
+                justify-content: space-around;
+
+                p{
+                    font-size: toRem(16);
+                    font-weight: 500;
+                    color: #000;
+                    font-family: 'Poppins';
+                    padding: 0;
+                    margin: 0;
+                }
+                span{
+                    color: #9F9F9F;
+                    font-size: toRem(16);
+                    font-weight: 500;
+                    font-family: 'Poppins';
+                }
+            }
+            .total-div{
+                display: flex;
+                justify-content: space-around;
+                margin-top: toRem(20);
+
+                p{
+                    font-size: toRem(16);
+                    font-weight: 500;
+                    color: #000;
+                    font-family: 'Poppins';
+                    padding: 0;
+                    margin: 0;
+                }
+                span{
+                    color: #B88E2F;
+                    font-size: toRem(20);
+                    font-weight: 500;
+                    font-family: 'Poppins';
+                    @include breakpoint(lg){
+                        font-size: toRem(18);
+                    }
+                    @include breakpoint(md){
+                        font-size: toRem(18);
+                    }
+                    @include breakpoint(sm){
+                        font-size: toRem(14);
+                    }
+                    @include breakpoint(xs){
+                        font-size: toRem(14);
+                    }
+                }
+            }
+        }
+        .checkout-btn-div{
+            text-align: center;
+            button{
+                border-radius: toRem(15);
+                border:1px solid #000;
+                color:#000;
+                font-size: toRem(20);
+                font-weight: 400;
+                padding: toRem(13) toRem(50);
+            }
+            .checkout-button{
+                border-radius: toRem(15);
+                border:1px solid #000;
+                color:#000;
+                font-size: toRem(20);
+                font-weight: 400;
+                padding: toRem(13) toRem(50);
+            }
+        }
+    }
+}

@@ -1,0 +1,78 @@
+$yellow-background: #B88E2F;
+$transparent-bg:transparent;
+
+@use '../custom' as *;
+
+@function toRem($value){
+    $remvalue :($value/16) + rem;
+    @return $remvalue;
+}
+
+// Breakpoints map 
+$breakpoints:(
+    "xs":"max-width:576px",
+    "sm":"(min-width:577px) and (max-width:767px)",
+    "md":"(min-width:768px) and (max-width:991px)",
+    "lg":"(min-width:992px) and (max-width:1199px)",
+    "xl":"(min-width:1200px) and (max-width:1399px)",
+    "xxl":"(min-width:1400px) and (max-width:1700px)"
+);
+
+@mixin breakpoint($user-value){
+    $my-map: map-get($breakpoints, $user-value);
+    @if $my-map{
+        @media(#{$my-map}){
+            @content;
+        }
+    }@else{
+        @error "Opps, seems like the breakpoint #{$user-value} isn't define yet"
+    }
+};
+
+%details-label-color{
+    color:#9F9F9F;
+    font-size:toRem(14);
+    font-weight:400;
+    font-family: Poppins;
+}
+
+%details-size-color-wrapper{
+    display: flex;
+    gap: toRem(15);
+    align-items: center;
+    padding-top: toRem(5);
+}
+%details-color-varient{
+    width: toRem(30);
+    height: toRem(30);
+    border-radius: toRem(50);
+}
+%details-btns{
+    border-radius: toRem(10);
+    padding: toRem(15) toRem(50);
+    text-decoration: none;
+    border: toRem(1) solid #000000;
+    font-size: toRem(20);
+    font-weight: 400;
+    color: #000;
+    font-family: 'Poppins';
+}
+
+@mixin button-bg($background-color:true){
+    @if $background-color{
+        background-color: $yellow-background;
+        color:#fff;
+        font-size: toRem(16);
+        font-weight: 700;
+        text-decoration: none;
+        padding: toRem(17) toRem(60);
+        
+    } @else{
+        border: 1px solid $yellow-background;
+        background-color: $transparent-bg;
+        color: $yellow-background;
+        border-radius: 0;
+        padding: toRem(17) toRem(60);
+    }
+}
+

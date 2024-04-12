@@ -1,0 +1,130 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.popup-main{
+    width: 100%;
+    max-width: 20%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    background-color: #fff;
+    display: none;
+    transition:all 0.6s;
+    box-shadow: 0px 0px 20px 7px #00000033;
+    
+    .popup-inner{
+        .cart-table{
+            padding: toRem(30);
+            .cart-title{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                h4{
+                    font-size: toRem(24);
+                    font-weight: 600;
+                    font-family: 'Poppins';
+                    color: #000;
+                    padding: 0;
+                    margin: 0;
+                }
+                button{
+                    background-color: transparent;
+                    outline: none;
+                    border: none;
+                }
+            }
+            .popup-wrapper{
+                table{
+                    width: 100%;
+                    tbody{
+                        width: 100%;
+                        tr{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding-bottom: toRem(20);
+        
+                            td{
+                                a{
+                                    text-decoration: none;
+                                    img{
+                                        width: toRem(105);
+                                        height: toRem(105);
+                                        border-radius: toRem(10);
+                                        
+                                    }
+                                }
+                                p{
+                                    font-size:toRem(16);
+                                    font-weight: 400;
+                                    color: #000;
+                                    font-family: 'Poppins';
+                                    padding: 0;
+                                    margin: 0;
+
+                                    span{
+                                        font-size:toRem(12);
+                                        font-weight: 500;
+                                        color: #B88E2F;
+                                        font-family: 'Poppins';
+                                        padding-left: toRem(10);
+                                    }
+                                }
+                                .close-popup-btn{
+                                text-decoration: none;
+                                    img{
+                                        width: toRem(20);
+                                        height: toRem(20);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .sub-total-wrapper{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                h5{
+                    font-size:toRem(16);
+                    font-weight: 500;
+                    color: #000;
+                    font-family: 'Poppins';
+                }
+                p{
+                    font-size:toRem(16);
+                    font-weight: 500;
+                    color: #B88E2F;
+                    font-family: 'Poppins';
+                }
+            }
+        }
+        .cart-popup-btn{
+            padding: toRem(30);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            a{
+                text-decoration: none;
+                &.btn-popup{
+                    background-color: transparent;
+                    background: none;
+                    box-shadow: none;
+                    outline: none;
+                    border: none;
+                    border: 1px solid #000;
+                    border-radius: toRem(50);
+                    font-size: toRem(12);
+                    font-weight: 400;
+                    color: #000;
+                    font-family: 'Poppins';
+                    padding: toRem(8) toRem(22);
+                }
+            }
+        }
+    }
+}

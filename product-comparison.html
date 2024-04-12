@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniro Website Template in Sass</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html"><img src="./images/furniro-logo.png" class="img-fluid"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="shop.html">Shop</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="header-icons">
+                <a href="javascript:void(0);"><i class="fa-regular fa-user"></i></a>
+                <a href="javascript:void(0);"><i class="fa fa-search"></i></a>
+                <a href="javascript:void(0);"><i class="fa-regular fa-heart"></i></a>
+                <a id="shoppingcart" href="javascript:void(0);"><i class="fa-solid fa-cart-shopping"></i></a>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <main>
+        <!-- Breadcrump Section Start -->
+        <section class="breadcrumb-section position-relative">
+            <div class="breadcrumb-bg-img">
+                <img src="./images/shop/shop-banner.png" class="img-fluid w-100">
+            </div>
+            <div class="breadcrumb-text">
+                <h3>Product Comparison</h3>
+                <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
+                    aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Comparison</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+        <!-- Breadcrump Section End -->
+
+        <!-- Product Comparison Table Section Start -->
+
+        <section class="product-comparison-table">
+            <div class="container">
+                <div class="product-image-wrapper">
+                    <div class="first-row">
+                        <h4>Go to Product page for more Products</h4>
+                        <a href="javascript:void(0);">View More</a>
+                    </div>
+                    <div class="product-1">
+                        <div class="img-div">
+                            <img src="./images/product/outdoor-sofa-set.png" class="img-fluid">
+                        </div>
+                        <div class="product-title-rate">
+                            <h5>Asgaard Sofa</h5>
+                            <p>Rs. 250,000.00</p>
+                            <div class="rating-star">
+                                <p>4.7
+                                    <i class="fa fa-star yellow"></i>
+                                    <i class="fa fa-star yellow"></i>
+                                    <i class="fa fa-star yellow"></i>
+                                    <i class="fa fa-star yellow"></i>
+                                    <i class="fa fa-star-half yellow"></i>
+                                </p>
+                                <hr class="vertical-divider">
+                                <span>204 Review</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-1">
+                        <div class="img-div">
+                            <img src="./images/product/sofa1.png" class="img-fluid">
+                        </div>
+                        <div class="product-title-rate">
+                            <h5>Asgaard Sofa</h5>
+                            <p>Rs. 250,000.00</p>
+                            <div class="rating-star">
+                                <p>4.2
+                                    <i class="fa fa-star yellow"></i>
+                                    <i class="fa fa-star yellow"></i>
+                                    <i class="fa fa-star yellow"></i>
+                                    <i class="fa fa-star yellow"></i>
+                                    <i class="fa fa-star-half yellow"></i>
+                                </p>
+                                <hr class="vertical-divider">
+                                <span>145 Review</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="add-product-div">
+                        <h4>Add A Product</h4>
+                        <select>
+                            <option>Choose a Product</option>
+                            <option>Syltherine</option>
+                            <option>Lolito</option>
+                            <option>Respira</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="product-compare-wrapper">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>General</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>Sales Package</td>
+                                <td>1 sectional sofa</td>
+                                <td>1 Three Seater, 2 Single Seater</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Model Number</td>
+                                <td>TFCBLIGRBL6SRHS</td>
+                                <td>DTUBLIGRBL568</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Secondary Material</td>
+                                <td>Solid Wood</td>
+                                <td>Solid Wood</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Configuration</td>
+                                <td>L-shaped</td>
+                                <td>L-shaped</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Upholstery Material</td>
+                                <td>Fabric + Cotton</td>
+                                <td>Fabric + Cotton</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Upholstery Color</td>
+                                <td>Bright Grey & Lion</td>
+                                <td>Bright Grey & Lion</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <th>Product</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>Filling Material</td>
+                                <td>Foam</td>
+                                <td>Matte</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Finish Type</td>
+                                <td>Bright Grey & Lion</td>
+                                <td>Bright Grey & Lion</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Adjustable Headrest</td>
+                                <td>No</td>
+                                <td>Yes</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Maximum Load Capacity</td>
+                                <td>280 KG</td>
+                                <td>300 KG</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Origin of Manufacture</td>
+                                <td>India</td>
+                                <td>India</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <th>Dimensions</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>Width</td>
+                                <td>265.32 cm</td>
+                                <td>265.32 cm</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Height</td>
+                                <td>76 cm</td>
+                                <td>76 cm</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Depth</td>
+                                <td>167.76 cm</td>
+                                <td>167.76 cm</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Weight</td>
+                                <td>45 KG</td>
+                                <td>65 KG</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Seat Height</td>
+                                <td>41.52 cm</td>
+                                <td>41.52 cm</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Leg Height</td>
+                                <td>5.46 cm</td>
+                                <td>5.46 cm</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <th>Warranty</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>Warranty Summary</td>
+                                <td>1 Year Manufacturing Warranty</td>
+                                <td>1.2 Year Manufacturing Warranty</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Warranty Service Type</td>
+                                <td>For Warranty Claims or Any Product Related Issues Please Email at <a href="mailto:operations@trevifurniture.com">operations@trevifurniture.com</a></td>
+                                <td>For Warranty Claims or Any Product Related Issues Please Email at <a href="mailto:support@xyz.com">support@xyz.com</a></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Covered in Warranty</td>
+                                <td>Warranty Against Manufacturing Defect</td>
+                                <td>Warranty of the product is limited to manufacturing defects only.</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Not Covered in Warranty</td>
+                                <td>The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.</td>
+                                <td>The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Domestic Warranty</td>
+                                <td>1 Year</td>
+                                <td>3 Months</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><a class="add-to-cart" href="javascript:void(0);">Add To Cart</a></td>
+                                <td><a class="add-to-cart" href="javascript:void(0);">Add To Cart</a></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Comparison Table Section End -->
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-xs-12">
+                    <div class="footer-logo">
+                        <div class="logo-img">
+                            <img src="./images/funiro-logo-footer.png" class="img-fluid">
+                        </div>
+                        <div class="footer-address">
+                            <p>400 University Drive Suite 200 Coral Gables, FL 33134 USA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-xs-12">
+                    <div class="footer-links">
+                        <h4>Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="javascript:void(0);">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-xs-12">
+                    <div class="footer-links">
+                        <h4>Help</h4>
+                        <ul>
+                            <li><a href="javascript:void(0);">Payment Options</a></li>
+                            <li><a href="javascript:void(0);">Returns</a></li>
+                            <li><a href="javascript:void(0);">Privacy Policies</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-xs-12">
+                    <div class="footer-links">
+                        <h4>Newsletter</h4>
+                        <form>
+                            <div class="subscribe-wrapper">
+                                <input type="email" id="email" placeholder="Enter Your Email Address">
+                                <button class="btn btn-subs" type="submit">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <p class="copyright">2023 furino. All rights reverved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!--Cart popup Start-->
+
+    <section class="popup-main" id="popup-cart">
+        <div class="popup-inner">
+            <div class="cart-table">
+                <div class="cart-title">
+                    <h4>Shopping Cart</h4>
+                    <button id="cartclose"><img src="./images/icons/cartclose.png"></button>
+                </div>
+                <hr class="mt-4 mb-4">
+                <div class="popup-wrapper">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="javascript:void(0);"><img src="./images/image-1.png"></a>
+                                </td>
+                                <td>
+                                    <a href="javascript:void(0);">
+                                        <p>Asgaard sofa</p>
+                                        <p>1 X <span>Rs. 250,000.00</span></p>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a class="close-popup-btn" href="javascript:void(0);"><img src="./images/icons/close-popup.png"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="javascript:void(0);"><img src="./images/image-2.png"></a>
+                                </td>
+                                <td>
+                                    <a href="javascript:void(0);">
+                                        <p>Casaliving Wood</p>
+                                        <p>1 X <span>Rs. 270,000.00</span></p>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a class="close-popup-btn" href="javascript:void(0);"><img src="./images/icons/close-popup.png"></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="sub-total-wrapper">
+                    <h5>Subtotal</h5>
+                    <p>Rs. 520,000.00</p>
+                </div>
+            </div>
+            <hr>
+            <div class="cart-popup-btn">
+                <a href="cart.html" class="btn-popup">Cart</a>
+                <a href="checkout.html" class="btn-popup">Checkout</a>
+                <a href="cart.html" class="btn-popup">Comparison</a>
+            </div>
+        </div>
+    </section>
+
+    <!--Cart popup End-->
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script src="./assets/js/custom.js"></script>
+</html>

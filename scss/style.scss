@@ -1,0 +1,39 @@
+@use './custom';
+
+@use './components/mixins';
+
+@use './section/header';
+@use './section/banner';
+@use './section/browse-range';
+@use './section/our-products';
+@use './section/inspiration';
+@use './section/breadcrump';
+@use './section/filter';
+@use './section/product-shop-page';
+@use './section/deliver-detail';
+@use './section/product-info_price';
+@use './section/product-detail';
+@use './section/releted-products';
+@use './section/cart';
+@use './section/checkout';
+@use './section/blog';
+@use './section/contact';
+@use './section/cart-popup';
+@use './section/product-comparison';
+@use './section/footer';
+
+
+
+*,body,h1,h2,h3,h4,h5,h6,p,a,li,strong.span{
+    font-family: 'Poppins', sans-serif;
+}
+.section-title{
+    font-size: toRem(40) !important;
+    font-weight: 700;
+    color: #333;
+}
+.section-para{
+    color: #666;
+    font-size: toRem(20) !important;
+    font-weight: 400;
+}

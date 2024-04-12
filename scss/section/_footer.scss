@@ -1,0 +1,75 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+footer{
+    padding: toRem(70) toRem(0) toRem(0);
+    .footer-logo{
+        max-width: 70%;
+        width: 100%;
+        .logo-img{
+            img{
+
+            }
+        }
+        .footer-address{
+            margin-top: toRem(30);
+
+            p{
+                font-size: toRem(16);
+                color:#9F9F9F;
+                font-weight: 400;
+            }
+        }
+    }
+    .footer-links{
+        h4{
+            font-size: toRem(16);
+            color:#9F9F9F;
+            font-weight: 400;
+        }
+        ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            li{
+                a{
+                    font-size: toRem(16);
+                    color: #000;
+                    font-weight: 500;
+                    text-decoration: none;
+                    line-height: toRem(40);
+                }
+            }
+        }
+        form{
+            .subscribe-wrapper{
+                display: flex;
+                gap: toRem(20);
+
+                input{
+                    border:none;
+                    border-bottom: 2px solid #000;
+                }
+                button{
+                    border:none;
+                    border-bottom: 2px solid #000;
+                    border-radius: 0;
+                    font-size: toRem(14);
+                    font-weight: 500;
+                    color:#000;
+                    text-transform: uppercase;
+                    font-family: Poppins;
+                }
+            }
+        }
+    }
+    .copyright{
+        font-size: toRem(16);
+        color: #000;
+        font-weight: 400;
+        padding: 0;
+        margin: 0;
+        padding-bottom: toRem(15);
+        padding-left: toRem(15);
+    }
+}

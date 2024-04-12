@@ -1,0 +1,227 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.filter-section{
+    background-color:#F9F1E7;
+    padding: 30px 0;
+
+    .filter-option{
+        ul{
+            list-style: none;
+            display: flex;
+            gap: toRem(25);
+            align-items: center;
+            padding: 0;
+            margin: 0;
+
+            @include breakpoint(xl){
+                gap: toRem(20);
+                justify-content: center;
+            }
+            @include breakpoint(lg){
+                gap: toRem(20);
+                justify-content: center;
+            }
+            @include breakpoint(md){
+                gap: toRem(20);
+                justify-content: center;
+            }
+            @include breakpoint(sm){
+                gap: toRem(10);
+                justify-content: center;
+            }
+            @include breakpoint(xs){
+                gap: toRem(10);
+                justify-content: center;
+            }
+
+            li{
+                &.result-text{
+                    font-size: toRem(16);
+                    font-weight: 400;
+                    color: #000;
+
+                    @include breakpoint(xl){
+                        font-size: toRem(14);
+                    }
+                    @include breakpoint(lg){
+                        font-size: toRem(14);
+                    }
+                    @include breakpoint(md){
+                        font-size: toRem(14);
+                    }
+                    @include breakpoint(sm){
+                        font-size: toRem(12);
+                    }
+                    @include breakpoint(xs){
+                        font-size: toRem(12);
+                    }
+                }
+                a{
+                    font-family: 'Poppins';
+                    font-size: toRem(20);
+                    font-weight: 400;
+                    color: #000;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+
+                    @include breakpoint(sm){
+                        font-size: toRem(14);
+                    }
+                    @include breakpoint(xs){
+                        font-size: toRem(14);
+                    }
+
+                    img{
+                        width: 35px;
+                        height: 35px;
+                        object-fit: contain;
+                        padding-right: 15px;
+
+                        @include breakpoint(sm){
+                            width: 25px;
+                            height: 25px;
+                        }
+                        @include breakpoint(xs){
+                            width: 25px;
+                            height: 25px;
+                        }
+                    }
+                }
+            }
+        }
+        .vertical-divider{
+            width: toRem(3);
+            height: 37px;
+            background-color: #9F9F9F;
+        }
+    }
+    .sort-wrapper{
+        display: flex;
+        align-items: center;
+        gap: toRem(40);
+        justify-content: flex-end; 
+
+        @include breakpoint(xl){
+            margin-top: toRem(10);
+            justify-content: center;
+        }
+        @include breakpoint(lg){
+            margin-top: toRem(10);
+            justify-content: center;
+        }
+        @include breakpoint(md){
+            margin-top: toRem(10);
+            justify-content: center;
+        }
+        @include breakpoint(sm){
+            margin-top: toRem(10);
+            justify-content: center;
+        }
+        @include breakpoint(xs){
+            margin-top: toRem(10);
+            justify-content: center;
+        }
+
+        .sort-by-option{
+            .show-div{
+                display: flex;
+                gap: toRem(20);
+                align-items: center;
+
+                @include breakpoint(sm){
+                    gap: toRem(10);
+                }
+                @include breakpoint(xs){
+                    gap: toRem(10);
+                }
+
+                h4{
+                    font-family: 'Poppins';
+                    font-size: toRem(20);
+                    font-weight: 400;
+                    color: #000;
+                    padding: 0;
+                    margin: 0;
+                    @include breakpoint(sm){
+                        font-size: toRem(14);
+                    }
+                    @include breakpoint(xs){
+                        font-size: toRem(14);
+                    }
+                }
+                input{
+                    width: 55px;
+                    height: 55px;
+                    text-align: center;
+                    border: none;
+
+                    @include breakpoint(sm){
+                        width: 35px;
+                        height: 35px;
+                    }
+                    @include breakpoint(xs){
+                        width: 35px;
+                        height: 35px;
+                    }
+
+                    &[type="text"]{
+                        font-family: 'Poppins';
+                        font-size: toRem(20);
+                        font-weight: 400;
+                        color: #9F9F9F;
+
+                        @include breakpoint(xs){
+                            font-size: toRem(14);
+                        }
+                        @include breakpoint(sm){
+                            font-size: toRem(14);
+                        }
+                    }
+                    &:focus{
+                        outline: none;
+                        border: none;
+                    }
+                }
+                select{
+                    font-family: 'Poppins';
+                    font-size: toRem(20);
+                    font-weight: 400;
+                    color: #9F9F9F;
+                    border:none;
+                    padding: 0 15px;
+                    height: 55px;
+
+                    @include breakpoint(xs){
+                        font-size: toRem(14);
+                        height: 35px;
+                    }
+                    @include breakpoint(sm){
+                        font-size: toRem(14);
+                        height: 35px;
+                    }
+
+                    option{
+                        font-family: 'Poppins';
+                        font-size: toRem(20);
+                        font-weight: 400;
+                        color: 000;
+
+                        @include breakpoint(xs){
+                            font-size: toRem(14);
+                        }
+                        @include breakpoint(sm){
+                            font-size: toRem(14);
+                        }
+                    }
+
+                    &:focus{
+                        outline: none;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}

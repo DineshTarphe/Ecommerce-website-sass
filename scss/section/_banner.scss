@@ -1,0 +1,85 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.banner-secction{
+    // height: calc(100vh - 100px);
+    height: 100vh;
+    .banner-img{
+        position: relative;
+        img{
+            width: 100%;
+            // height: calc(100vh - 100px);
+            height: 100vh;
+            object-fit: cover;
+            object-position: bottom;
+        }
+    }
+    .banner-content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 3%;
+        background-color: #FFF3E3;
+        width: 30%;
+        padding: 50px;
+        box-shadow: 5px 5px 20px 0px #00000030;
+
+       
+        @include breakpoint(lg){
+            width: 50%;
+        }
+        @include breakpoint(md){
+            width: 50%;
+        }
+        @include breakpoint(sm){
+            width: 90%;
+            padding: 25px;
+        }
+        @include breakpoint(xs){
+            width: 90%;
+            padding: 20px;
+        }
+
+        h5{
+            font-size: toRem(16);
+            font-weight: 600;
+            color: #333333;
+        }
+        h3{
+            font-size: toRem(52);
+            color: #B88E2F;
+            font-weight: 700;
+            max-width: 90%;
+
+            @include breakpoint(xxl){
+                font-size: toRem(38);
+            }
+            @include breakpoint(xl){
+                font-size: toRem(32);
+            }
+            @include breakpoint(lg){
+                font-size: toRem(30);
+            }
+            @include breakpoint(md){
+                font-size: toRem(32);
+            }
+            @include breakpoint(sm){
+                font-size: toRem(28);
+            }
+            @include breakpoint(xs){
+                font-size: toRem(24);
+            }
+        }
+        p{
+            font-size: toRem(18);
+            font-weight: 500;
+            color: #333;
+        }
+        a{
+            @include button-bg($background-color: true);  
+            display: block;
+            width: fit-content;
+            margin-top: 50px;
+        }
+    }
+}

@@ -1,0 +1,90 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.product-details-main{
+    padding: toRem(70) toRem(0);
+    ul{
+        justify-content: center;
+        border: none;
+        padding: toRem(0) toRem(0) toRem(20);
+        
+        li{
+            border: none;
+
+            button{
+                font-size: toRem(24) !important;
+                font-weight: 500 !important;
+                color:#9F9F9F;
+                border: none !important;
+
+                @include breakpoint(xl){
+                    font-size: toRem(22) !important;
+                }
+                @include breakpoint(lg){
+                    font-size: toRem(18) !important;
+                }
+                @include breakpoint(md){
+                    font-size: toRem(16) !important;
+                }
+                @include breakpoint(sm){
+                    font-size: toRem(14) !important;
+                }
+                @include breakpoint(xs){
+                    font-size: toRem(14) !important;
+                }
+
+                &:hover{
+                    color:#000;
+                }
+
+                &.active{
+                    font-size: toRem(24);
+                    font-weight: 500;
+                    color:#000;
+                }
+            }
+        }
+    }
+    .tab-content{
+        .tab-pane{
+            p{
+                color:#9F9F9F;
+                font-size: toRem(16);
+                font-weight: 400;
+                font-family: Poppins;
+                max-width: 75%;
+                width: 100%;
+                margin: auto;
+                padding: toRem(10) toRem(0);
+
+
+                @include breakpoint(lg){
+                    max-width: 100%;
+                }
+                @include breakpoint(md){
+                    max-width: 100%;
+                    font-size: toRem(14);
+                }
+                @include breakpoint(sm){
+                    max-width: 100%;
+                    font-size: toRem(12);
+                }
+                @include breakpoint(xs){
+                    max-width: 100%;
+                    font-size: toRem(12);
+                }
+            }
+            img{
+                margin-top: toRem(15);
+                background-color: #F9F1E7;
+                border-radius: toRem(10);
+            }
+        }
+    }
+}
+
+
+
+
+    
+

@@ -1,0 +1,21 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+
+.browse-range-section{
+    padding: 70px 0;
+
+    .categories-wrapper{
+        .categories-img{
+            img{
+                border-radius: toRem(10);
+            }
+        }
+        h5{
+            font-size: toRem(24);
+            font-weight: 600;
+            color: #333;
+            margin-top: 15px;
+        }
+    }
+}
